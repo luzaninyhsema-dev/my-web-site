@@ -3,38 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Галерея | Мой сайт</title>
+  <title>Галерея — Luzaniny</title>
+  <meta name="description" content="Примеры работ: лендинги, портфолио, визитки." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Главная</a>
-      <a href="about.html">О нас</a>
-      <a href="services.html">Услуги</a>
-      <a href="gallery.html" class="active">Галерея</a>
-      <a href="contact.html">Контакты</a>
-    </nav>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">⚡ Luzaniny<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main>
-    <section class="page-intro">
-      <h2>Наша галерея</h2>
-      <p>Примеры наших работ и вдохновляющие изображения.</p>
-    </section>
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>Галерея работ</h2>
+        <p>Нажмите на любую карточку, чтобы увеличить</p>
+      </div>
 
-    <section class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&q=80" alt="Проект 1" class="gallery-item zoom-on-hover" alt="Команда проекта" class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Проект 2" class="gallery-item zoom-on-hover" />
-      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80" alt="Проект 3" class="gallery-item zoom-on-hover" />
-      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&q=80" alt="Проект 4" class="gallery-item zoom-on-hover" />
+      <div class="gallery-grid">
+        <div class="gallery-item reveal" data-label="Лендинг для стартапа">01</div>
+        <div class="gallery-item reveal" data-label="Портфолио фотографа">02</div>
+        <div class="gallery-item reveal" data-label="Сайт-визитка студии">03</div>
+        <div class="gallery-item reveal" data-label="Лендинг для кафе">04</div>
+        <div class="gallery-item reveal" data-label="Портфолио дизайнера">05</div>
+        <div class="gallery-item reveal" data-label="Сайт для мастера маникюра">06</div>
+        <div class="gallery-item reveal" data-label="Корпоративный сайт">07</div>
+        <div class="gallery-item reveal" data-label="Лендинг курса">08</div>
+        <div class="gallery-item reveal" data-label="Сайт юридической фирмы">09</div>
+      </div>
     </section>
   </main>
 
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-content"></div>
+  </div>
+
   <footer>
-    <p>&copy; 2026 Мой сайт. Все права защищены.</p>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Luzaniny. Сделано с ♥</div>
+      <div class="socials">
+        <a href="https://github.com/luzaninyhsema-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+        <a href="mailto:hello@example.com">Email</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/main.js"></script>
 </body>
 </html>

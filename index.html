@@ -1,54 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-     <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Главная | Мой сайт</title>
+  <title>Luzaniny — создание статических сайтов</title>
+  <meta name="description" content="Создаём быстрые, адаптивные и красивые статические сайты. Лендинги, визитки, портфолио." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html" class="active">Главная</a>
-      <a href="about.html">О нас</a>
-      <a href="services.html">Услуги</a>
-      <a href="gallery.html">Галерея</a>
-      <a href="contact.html">Контакты</a>
-    </nav>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">⚡ Luzaniny<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Добро пожаловать на наш сайт</h1>
-      <p>Мы создаём красивые и удобные статические сайты.</p>
-      <button id="cta-button">Узнать больше</button>
+    <section class="hero container">
+      <div class="badge">Свободны для новых проектов</div>
+      <h1>Создаём статические сайты,<br />которые работают быстро</h1>
+      <p class="lead">
+        Лендинги, визитки и портфолио без лишних зависимостей.
+        Лёгкий код, адаптивность и живые анимации.
+      </p>
+      <div class="hero-actions">
+        <a href="contacts.html" class="btn btn-primary">Обсудить проект →</a>
+        <a href="gallery.html" class="btn btn-ghost">Смотреть работы</a>
+      </div>
     </section>
 
-    <section class="features">
-      <div class="card fade-in">
-        <h3>Простота</h3>
-        <p>Лёгкий и понятный код без лишних зависимостей.</p>
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>Почему мы</h2>
+        <p>Три принципа, на которых строим каждый проект</p>
       </div>
-      <div class="card fade-in">
-        <h3>Адаптивность</h3>
-        <p>Сайт отлично смотрится на любых устройствах.</p>
+
+      <div class="features-grid">
+        <article class="feature reveal">
+          <div class="feature-icon">⚡</div>
+          <h3>Загрузка меньше секунды</h3>
+          <p>Чистый HTML и CSS без тяжёлых библиотек.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon">📱</div>
+          <h3>Идеально на любом экране</h3>
+          <p>От смартфона до 4K-монитора — без потери смысла.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon">✨</div>
+          <h3>Живые эффекты</h3>
+          <p>Микроанимации, которые помогают, а не мешают.</p>
+        </article>
       </div>
-      <div class="card fade-in">
-        <h3>Анимации</h3>
-        <p>Приятные эффекты для лучшего пользовательского опыта.</p>
+    </section>
+
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>Что мы делаем</h2>
+        <p>Коротко о ключевых направлениях</p>
+      </div>
+      <div class="cards-grid">
+        <a href="services.html" class="card reveal">
+          <div class="card-thumb">💻</div>
+          <div class="card-body">
+            <h3>Лендинги</h3>
+            <p>Одностраничники, которые продают.</p>
+          </div>
+        </a>
+        <a href="services.html" class="card reveal">
+          <div class="card-thumb">🎨</div>
+          <div class="card-body">
+            <h3>Портфолио</h3>
+            <p>Сайты для креативных профессионалов.</p>
+          </div>
+        </a>
+        <a href="services.html" class="card reveal">
+          <div class="card-thumb">🚀</div>
+          <div class="card-body">
+            <h3>Визитки</h3>
+            <p>Компактные сайты для бизнеса.</p>
+          </div>
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Мой сайт. Все права защищены.</p>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Luzaniny. Сделано с ♥</div>
+      <div class="socials">
+        <a href="https://github.com/luzaninyhsema-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+        <a href="mailto:hello@example.com">Email</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/main.js"></script>
 </body>
 </html>

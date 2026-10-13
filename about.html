@@ -3,49 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>О нас | Мой сайт</title>
+  <title>О нас — Luzaniny</title>
+  <meta name="description" content="Небольшая команда, создающая статические сайты с 2020 года." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Главная</a>
-      <a href="about.html" class="active">О нас</a>
-      <a href="services.html">Услуги</a>
-      <a href="gallery.html">Галерея</a>
-      <a href="contact.html">Контакты</a>
-    </nav>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">⚡ Luzaniny<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main>
-    <section class="page-intro">
-      <h2>О нашей команде</h2>
-      <p>Мы небольшая команда энтузиастов, которые любят создавать простые и красивые сайты.</p>
-    </section>
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>О нас</h2>
+        <p>Небольшая команда, которая любит чистый код и продуманный дизайн</p>
+      </div>
 
-    <section class="team">
-      <div class="member slide-up">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Член команды" />
-        <h3>Анна</h3>
-        <p>Дизайнер и UX-специалист</p>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2>Кто мы</h2>
+          <p>
+            Мы — команда веб-разработчиков, специализирующаяся на создании
+            статических сайтов: лендингов, портфолио и визиток.
+            С 2020 года мы помогли десяткам клиентов запустить быстрые,
+            красивые и надёжные сайты без лишних зависимостей.
+          </p>
+          <p>
+            Наш подход прост: минимум технологий — максимум результата.
+            Мы используем чистый HTML, CSS и JavaScript, чтобы сайт
+            загружался мгновенно и работал на любом устройстве.
+          </p>
+          <p>
+            Каждый проект мы начинаем с обсуждения задачи, а не с шаблона.
+            Это позволяет подобрать решение под конкретные цели клиента.
+          </p>
+        </div>
+        <div class="about-visual reveal">👥</div>
       </div>
-      <div class="member slide-up">
-        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="Член команды" />
-        <h3>Иван</h3>
-        <p>Фронтенд-разработчик</p>
-      </div>
-      <div class="member slide-up">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Член команды" />
-        <h3>Мария</h3>
-        <p>Контент-менеджер</p>
+
+      <div class="stats reveal">
+        <div class="stat">
+          <b>50+</b>
+          <span>Проектов сдано</span>
+        </div>
+        <div class="stat">
+          <b>5 лет</b>
+          <span>На рынке</span>
+        </div>
+        <div class="stat">
+          <b>98%</b>
+          <span>Довольных клиентов</span>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Мой сайт. Все права защищены.</p>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Luzaniny. Сделано с ♥</div>
+      <div class="socials">
+        <a href="https://github.com/luzaninyhsema-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+        <a href="mailto:hello@example.com">Email</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/main.js"></script>
 </body>
 </html>

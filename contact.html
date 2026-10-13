@@ -3,47 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Контакты | Мой сайт</title>
+  <title>Контакты — Luzaniny</title>
+  <meta name="description" content="Свяжитесь с нами: email, Telegram, GitHub или через форму." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Главная</a>
-      <a href="about.html">О нас</a>
-      <a href="services.html">Услуги</a>
-      <a href="gallery.html">Галерея</a>
-      <a href="contact.html" class="active">Контакты</a>
-    </nav>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">⚡ Luzaniny<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main>
-    <section class="page-intro">
-      <h2>Свяжитесь с нами</h2>
-      <p>Будем рады ответить на ваши вопросы.</p>
-    </section>
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>Свяжитесь с нами</h2>
+        <p>Ответим в течение дня и предложим решение под вашу задачу</p>
+      </div>
 
-    <section class="contact-form-wrapper">
-      <form id="contactForm" class="shake-on-error">
-        <label for="name">Ваше имя:</label>
-        <input type="text" id="name" name="name" required placeholder="Иван Иванов" />
+      <div class="contact-wrap">
+        <div class="contact-info reveal">
+          <p>Выберите удобный способ связи — или заполните форму справа.</p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="example@mail.com" />
+          <div class="contact-item">
+            <div class="icon">✉️</div>
+            <div>
+              <b>Email</b>
+              <span>hello@example.com</span>
+            </div>
+          </div>
 
-        <label for="message">Сообщение:</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Напишите нам..."></textarea>
+          <div class="contact-item">
+            <div class="icon">📱</div>
+            <div>
+              <b>Telegram</b>
+              <span>@luzaniny</span>
+            </div>
+          </div>
 
-        <button type="submit">Отправить</button>
-        <p id="form-status" class="status-message"></p>
-      </form>
+          <div class="contact-item">
+            <div class="icon">💻</div>
+            <div>
+              <b>GitHub</b>
+              <span>github.com/luzaninyhsema-dev</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">🕐</div>
+            <div>
+              <b>Часы работы</b>
+              <span>Пн–Пт, 10:00–19:00 МСК</span>
+            </div>
+          </div>
+        </div>
+
+        <!--
+          Чтобы форма реально отправляла письма:
+          1. Зарегистрируйтесь на https://formspree.io
+          2. Создайте форму → получите endpoint
+          3. Замените YOUR_FORM_ID ниже
+        -->
+        <form
+          class="contact-form reveal"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Ваше имя" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="text" name="subject" placeholder="Тема" />
+          <textarea name="message" placeholder="Расскажите о проекте" required></textarea>
+          <button type="submit" class="btn btn-primary">Отправить заявку</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Мой сайт. Все права защищены.</p>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Luzaniny. Сделано с ♥</div>
+      <div class="socials">
+        <a href="https://github.com/luzaninyhsema-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+        <a href="mailto:hello@example.com">Email</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/main.js"></script>
 </body>
 </html>
