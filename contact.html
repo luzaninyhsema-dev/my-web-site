@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакты | Мой сайт</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="about.html">О нас</a>
+      <a href="services.html">Услуги</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="contact.html" class="active">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h2>Свяжитесь с нами</h2>
+      <p>Будем рады ответить на ваши вопросы.</p>
+    </section>
+
+    <section class="contact-form-wrapper">
+      <form id="contactForm" class="shake-on-error">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" required placeholder="Иван Иванов" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="example@mail.com" />
+
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Напишите нам..."></textarea>
+
+        <button type="submit">Отправить</button>
+        <p id="form-status" class="status-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Мой сайт. Все права защищены.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
