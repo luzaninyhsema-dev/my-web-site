@@ -72,7 +72,7 @@ my-web-site/
 
 Сайт доступен по адресу:
 
-**➡️ [https://luzaninyhsema-dev.github.io/my-web-site/](https://luzaninyhsema-dev.github.io/my-web-site/)**
+**➡️ [Веб-сайт](https://luzaninyhsema-dev.github.io/my-web-site/)**
 
 ### Как развернуть у себя
 
