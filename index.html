@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luzaniny — создание статических сайтов</title>
-  <meta name="description" content="Создаём быстрые, адаптивные и красивые статические сайты. Лендинги, визитки, портфолио." />
+  <title>Luzaniny — сайт-визитка</title>
+  <meta name="description" content="Учебный проект: статический сайт-визитка на HTML, CSS и JavaScript, размещённый на GitHub Pages." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,85 +15,121 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="logo">⚡ Luzaniny<span>.</span></a>
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" onerror="this.style.display='none'" />
+        Luzaniny<span>.</span>
+      </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Главная</a></li>
-        <li><a href="about.html">О нас</a></li>
-        <li><a href="services.html">Услуги</a></li>
-        <li><a href="gallery.html">Галерея</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="about.html">О проекте</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="contact.html">Контакты</a></li>
       </ul>
-      <button class="burger" id="burger" aria-label="Меню">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">🌙</button>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero container">
-      <div class="badge">Свободны для новых проектов</div>
-      <h1>Создаём статические сайты,<br />которые работают быстро</h1>
+      <div class="badge">Учебный проект 2026</div>
+      <h1>Сайт-визитка на чистом<br />HTML, CSS и JavaScript</h1>
       <p class="lead">
-        Лендинги, визитки и портфолио без лишних зависимостей.
-        Лёгкий код, адаптивность и живые анимации.
+        Демонстрация навыков работы с Git, GitHub Pages и современной вёрсткой.
+        Адаптивный дизайн, тёмная тема и интерактивные элементы без сторонних библиотек.
       </p>
       <div class="hero-actions">
-        <a href="contacts.html" class="btn btn-primary">Обсудить проект →</a>
-        <a href="gallery.html" class="btn btn-ghost">Смотреть работы</a>
+        <a href="about.html" class="btn btn-primary">О проекте →</a>
+        <a href="blog.html" class="btn btn-ghost">Читать блог</a>
       </div>
     </section>
 
+    <!-- СТАТИСТИКА -->
     <section class="container">
       <div class="section-head reveal">
-        <h2>Почему мы</h2>
-        <p>Три принципа, на которых строим каждый проект</p>
+        <h2>Проект в цифрах</h2>
+        <p>Немного статистики по репозиторию</p>
       </div>
-
-      <div class="features-grid">
-        <article class="feature reveal">
-          <div class="feature-icon">⚡</div>
-          <h3>Загрузка меньше секунды</h3>
-          <p>Чистый HTML и CSS без тяжёлых библиотек.</p>
-        </article>
-        <article class="feature reveal">
-          <div class="feature-icon">📱</div>
-          <h3>Идеально на любом экране</h3>
-          <p>От смартфона до 4K-монитора — без потери смысла.</p>
-        </article>
-        <article class="feature reveal">
-          <div class="feature-icon">✨</div>
-          <h3>Живые эффекты</h3>
-          <p>Микроанимации, которые помогают, а не мешают.</p>
-        </article>
+      <div class="stats">
+        <div class="stat reveal">
+          <b data-count="4">0</b>
+          <span>Страницы</span>
+        </div>
+        <div class="stat reveal">
+          <b data-count="1">0</b>
+          <span>CSS-файл</span>
+        </div>
+        <div class="stat reveal">
+          <b data-count="100" data-suffix="%">0</b>
+          <span>Адаптивность</span>
+        </div>
+        <div class="stat reveal">
+          <b data-count="0">0</b>
+          <span>Зависимостей</span>
+        </div>
       </div>
     </section>
 
+    <!-- ПОСЛЕДНИЕ НОВОСТИ -->
     <section class="container">
       <div class="section-head reveal">
-        <h2>Что мы делаем</h2>
-        <p>Коротко о ключевых направлениях</p>
+        <h2>Последние обновления</h2>
+        <p>Что нового появилось в проекте</p>
       </div>
       <div class="cards-grid">
-        <a href="services.html" class="card reveal">
-          <div class="card-thumb">💻</div>
-          <div class="card-body">
-            <h3>Лендинги</h3>
-            <p>Одностраничники, которые продают.</p>
-          </div>
-        </a>
-        <a href="services.html" class="card reveal">
+        <a href="blog.html" class="card reveal">
           <div class="card-thumb">🎨</div>
           <div class="card-body">
-            <h3>Портфолио</h3>
-            <p>Сайты для креативных профессионалов.</p>
+            <h3>Тёмная тема и localStorage</h3>
+            <p>Добавлен переключатель темы с сохранением выбора пользователя.</p>
+            <div class="card-meta"><span>10 октября 2026</span><span>→</span></div>
           </div>
         </a>
-        <a href="services.html" class="card reveal">
-          <div class="card-thumb">🚀</div>
+        <a href="blog.html" class="card reveal">
+          <div class="card-thumb">📱</div>
           <div class="card-body">
-            <h3>Визитки</h3>
-            <p>Компактные сайты для бизнеса.</p>
+            <h3>Мобильное меню</h3>
+            <p>Бургер-меню для удобной навигации на смартфонах и планшетах.</p>
+            <div class="card-meta"><span>8 октября 2026</span><span>→</span></div>
           </div>
+        </a>
+        <a href="blog.html" class="card reveal">
+          <div class="card-thumb">✨</div>
+          <div class="card-body">
+            <h3>Анимации при скролле</h3>
+            <p>Плавное появление секций с помощью IntersectionObserver.</p>
+            <div class="card-meta"><span>5 октября 2026</span><span>→</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- БЫСТРЫЕ ССЫЛКИ -->
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>Разделы сайта</h2>
+        <p>Перейдите в интересующий раздел</p>
+      </div>
+      <div class="features-grid">
+        <a href="about.html" class="feature reveal">
+          <div class="feature-icon">👥</div>
+          <h3>О проекте</h3>
+          <p>Цели, задачи, команда и история разработки.</p>
+        </a>
+        <a href="blog.html" class="feature reveal">
+          <div class="feature-icon">📰</div>
+          <h3>Блог</h3>
+          <p>Новости и заметки о ходе разработки.</p>
+        </a>
+        <a href="contact.html" class="feature reveal">
+          <div class="feature-icon">✉️</div>
+          <h3>Контакты</h3>
+          <p>Форма связи и другие способы связаться.</p>
         </a>
       </div>
     </section>
@@ -101,7 +137,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Luzaniny. Сделано с ♥</div>
+      <div>© <span id="year"></span> Luzaniny. Учебный проект.</div>
       <div class="socials">
         <a href="https://github.com/luzaninyhsema-dev" target="_blank" rel="noopener">GitHub</a>
         <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
@@ -111,6 +147,6 @@
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
-  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Блог — Luzaniny</title>
+  <meta name="description" content="Новости и заметки о ходе разработки сайта-визитки." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" onerror="this.style.display='none'" />
+        Luzaniny<span>.</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О проекте</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">🌙</button>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>Блог / Новости</h2>
+        <p>Заметки о ходе разработки проекта</p>
+      </div>
+
+      <!-- Фильтр -->
+      <div class="blog-filter reveal">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="dev">Разработка</button>
+        <button class="filter-btn" data-filter="design">Дизайн</button>
+        <button class="filter-btn" data-filter="git">Git</button>
+      </div>
+
+      <!-- Посты -->
+      <div class="blog-posts" style="margin-top: 40px;">
+
+        <article class="blog-post reveal" data-category="dev">
+          <div class="post-meta">
+            <span class="tag">Разработка</span>
+            <time>10 октября 2026</time>
+          </div>
+          <h3>Тёмная тема с сохранением в localStorage</h3>
+          <p>
+            Добавили переключатель темы в шапке. Выбор пользователя сохраняется
+            в localStorage и применяется при следующем визите. По умолчанию
+            используется системная тема через media-query.
+          </p>
+          <div class="post-actions">
+            <button class="like-btn" data-post-id="post1">❤️ <span class="count">12</span></button>
+          </div>
+        </article>
+
+        <article class="blog-post reveal" data-category="design">
+          <div class="post-meta">
+            <span class="tag">Дизайн</span>
+            <time>8 октября 2026</time>
+          </div>
+          <h3>Типографика: почему Inter</h3>
+          <p>
+            Выбрали шрифт Inter — он отлично читается на любых размерах,
+            поддерживает кириллицу и имеет много начертаний. Подключается
+            одной строкой через Google Fonts.
+          </p>
+          <div class="post-actions">
+            <button class="like-btn" data-post-id="post2">❤️ <span class="count">7</span></button>
+          </div>
+        </article>
+
+        <article class="blog-post reveal" data-category="git">
+          <div class="post-meta">
+            <span class="tag">Git</span>
+            <time>5 октября 2026</time>
+          </div>
+          <h3>Первый пуш на GitHub Pages</h3>
+          <p>
+            Настроили репозиторий, добавили README и включили GitHub Pages
+            в настройках. Сайт доступен по адресу
+            <code>luzaninyhsema-dev.github.io/my-web-site/</code>.
+          </p>
+          <div class="post-actions">
+            <button class="like-btn" data-post-id="post3">❤️ <span class="count">23</span></button>
+          </div>
+        </article>
+
+        <article class="blog-post reveal" data-category="dev">
+          <div class="post-meta">
+            <span class="tag">Разработка</span>
+            <time>2 октября 2026</time>
+          </div>
+          <h3>Анимации при скролле</h3>
+          <p>
+            Использовали IntersectionObserver для плавного появления секций.
+            Это нативный API браузера, работает без библиотек и не тормозит страницу.
+          </p>
+          <div class="post-actions">
+            <button class="like-btn" data-post-id="post4">❤️ <span class="count">9</span></button>
+          </div>
+        </article>
+
+        <article class="blog-post reveal" data-category="design">
+          <div class="post-meta">
+            <span class="tag">Дизайн</span>
+            <time>28 сентября 2026</time>
+          </div>
+          <h3>Палитра и акцентный цвет</h3>
+          <p>
+            Взяли нейтральную базу и один акцентный цвет (индиго). Такой подход
+            делает интерфейс спокойным и позволяет легко менять тему через CSS-переменные.
+          </p>
+          <div class="post-actions">
+            <button class="like-btn" data-post-id="post5">❤️ <span class="count">5</span></button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Luzaniny. Учебный проект.</div>
+      <div class="socials">
+        <a href="https://github.com/luzaninyhsema-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+        <a href="mailto:hello@example.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>

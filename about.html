@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>О нас — Luzaniny</title>
-  <meta name="description" content="Небольшая команда, создающая статические сайты с 2020 года." />
+  <title>О проекте — Luzaniny</title>
+  <meta name="description" content="Цели, задачи, команда и история разработки сайта-визитки." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,61 +15,143 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="logo">⚡ Luzaniny<span>.</span></a>
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" onerror="this.style.display='none'" />
+        Luzaniny<span>.</span>
+      </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Главная</a></li>
-        <li><a href="about.html">О нас</a></li>
-        <li><a href="services.html">Услуги</a></li>
-        <li><a href="gallery.html">Галерея</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="about.html">О проекте</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="contact.html">Контакты</a></li>
       </ul>
-      <button class="burger" id="burger" aria-label="Меню">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">🌙</button>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
+    <!-- Описание проекта -->
     <section class="container">
       <div class="section-head reveal">
-        <h2>О нас</h2>
-        <p>Небольшая команда, которая любит чистый код и продуманный дизайн</p>
+        <h2>О проекте</h2>
+        <p>Учебный сайт-визитка, созданный для отработки навыков Git и GitHub Pages</p>
       </div>
 
       <div class="about-grid">
         <div class="about-text reveal">
-          <h2>Кто мы</h2>
+          <h2>Что это за проект</h2>
           <p>
-            Мы — команда веб-разработчиков, специализирующаяся на создании
-            статических сайтов: лендингов, портфолио и визиток.
-            С 2020 года мы помогли десяткам клиентов запустить быстрые,
-            красивые и надёжные сайты без лишних зависимостей.
+            Этот сайт — самостоятельная работа по веб-разработке.
+            Его задача — показать умение работать с системой контроля версий Git,
+            создавать семантическую вёрстку, писать адаптивные стили и добавлять
+            интерактивность на чистом JavaScript.
           </p>
           <p>
-            Наш подход прост: минимум технологий — максимум результата.
-            Мы используем чистый HTML, CSS и JavaScript, чтобы сайт
-            загружался мгновенно и работал на любом устройстве.
+            Проект полностью статический: без фреймворков, сборщиков и серверной части.
+            Хостинг осуществляется через GitHub Pages — бесплатно и удобно для учебных целей.
           </p>
           <p>
-            Каждый проект мы начинаем с обсуждения задачи, а не с шаблона.
-            Это позволяет подобрать решение под конкретные цели клиента.
+            Отдельное внимание уделено доступности: поддержка тёмной темы,
+            анимации с учётом <code>prefers-reduced-motion</code>, семантические теги,
+            alt-тексты и корректная работа с клавиатуры.
           </p>
         </div>
-        <div class="about-visual reveal">👥</div>
+        <div class="about-visual reveal">📘</div>
+      </div>
+    </section>
+
+    <!-- Цели и задачи -->
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>Цели и задачи</h2>
+        <p>Что было важно решить в рамках работы</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature reveal">
+          <div class="feature-icon">🎯</div>
+          <h3>Освоить Git</h3>
+          <p>Научиться вести историю коммитов, работать с ветками и удалённым репозиторием.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-icon">🌐</div>
+          <h3>Развернуть сайт</h3>
+          <p>Опубликовать проект на GitHub Pages и настроить автоматическую сборку.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-icon">📱</div>
+          <h3>Адаптивная вёрстка</h3>
+          <p>Сделать сайт удобным на смартфоне, планшете и десктопе.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-icon">⚙️</div>
+          <h3>Чистый JavaScript</h3>
+          <p>Реализовать интерактивность без сторонних библиотек и фреймворков.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- История -->
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>История разработки</h2>
+        <p>Основные этапы проекта</p>
       </div>
 
-      <div class="stats reveal">
-        <div class="stat">
-          <b>50+</b>
-          <span>Проектов сдано</span>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <time>Сентябрь 2026</time>
+          <h3>Идея и планирование</h3>
+          <p>Определены цели проекта, выбрана структура страниц и дизайн-концепция.</p>
         </div>
-        <div class="stat">
-          <b>5 лет</b>
-          <span>На рынке</span>
+        <div class="timeline-item reveal">
+          <time>Начало октября 2026</time>
+          <h3>Вёрстка и стили</h3>
+          <p>Созданы HTML-страницы, единый CSS-файл, адаптивная сетка и тёмная тема.</p>
         </div>
-        <div class="stat">
-          <b>98%</b>
-          <span>Довольных клиентов</span>
+        <div class="timeline-item reveal">
+          <time>Середина октября 2026</time>
+          <h3>JavaScript и интерактив</h3>
+          <p>Добавлены меню, переключатель темы, анимации, форма и работа с localStorage.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <time>Конец октября 2026</time>
+          <h3>Публикация на GitHub Pages</h3>
+          <p>Репозиторий настроен, сайт доступен по публичному URL.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Команда -->
+    <section class="container">
+      <div class="section-head reveal">
+        <h2>Команда</h2>
+        <p>Над проектом работали</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-member reveal">
+          <div class="team-avatar">А</div>
+          <h3>Александр</h3>
+          <p>Вёрстка и адаптив</p>
+        </div>
+        <div class="team-member reveal">
+          <div class="team-avatar">М</div>
+          <h3>Мария</h3>
+          <p>Дизайн и типографика</p>
+        </div>
+        <div class="team-member reveal">
+          <div class="team-avatar">И</div>
+          <h3>Иван</h3>
+          <p>JavaScript и интерактив</p>
+        </div>
+        <div class="team-member reveal">
+          <div class="team-avatar">Л</div>
+          <h3>Лиза</h3>
+          <p>Git, документация, README</p>
         </div>
       </div>
     </section>
@@ -77,7 +159,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Luzaniny. Сделано с ♥</div>
+      <div>© <span id="year"></span> Luzaniny. Учебный проект.</div>
       <div class="socials">
         <a href="https://github.com/luzaninyhsema-dev" target="_blank" rel="noopener">GitHub</a>
         <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
@@ -87,6 +169,6 @@
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
-  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

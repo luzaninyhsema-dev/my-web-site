@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Контакты — Luzaniny</title>
-  <meta name="description" content="Свяжитесь с нами: email, Telegram, GitHub или через форму." />
+  <meta name="description" content="Свяжитесь с автором проекта: форма, email, Telegram, GitHub." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,30 +15,35 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="logo">⚡ Luzaniny<span>.</span></a>
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Логотип" onerror="this.style.display='none'" />
+        Luzaniny<span>.</span>
+      </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Главная</a></li>
-        <li><a href="about.html">О нас</a></li>
-        <li><a href="services.html">Услуги</a></li>
-        <li><a href="gallery.html">Галерея</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="about.html">О проекте</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="contact.html">Контакты</a></li>
       </ul>
-      <button class="burger" id="burger" aria-label="Меню">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">🌙</button>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="container">
       <div class="section-head reveal">
-        <h2>Свяжитесь с нами</h2>
-        <p>Ответим в течение дня и предложим решение под вашу задачу</p>
+        <h2>Контакты</h2>
+        <p>Свяжитесь с автором проекта удобным способом</p>
       </div>
 
       <div class="contact-wrap">
         <div class="contact-info reveal">
-          <p>Выберите удобный способ связи — или заполните форму справа.</p>
+          <p>Отвечаю в течение дня. Можно написать по любому вопросу — от идеи до бага.</p>
 
           <div class="contact-item">
             <div class="icon">✉️</div>
@@ -74,21 +79,22 @@
         </div>
 
         <!--
-          Чтобы форма реально отправляла письма:
-          1. Зарегистрируйтесь на https://formspree.io
-          2. Создайте форму → получите endpoint
-          3. Замените YOUR_FORM_ID ниже
+          Форма работает локально (демо, без отправки на сервер).
+          Введённые данные сохраняются в localStorage как черновик.
+          Чтобы реально отправлять письма, подключите Formspree или Web3Forms.
         -->
-        <form
-          class="contact-form reveal"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
-        >
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-success" id="formSuccess">
+            ✅ Сообщение отправлено! Спасибо, я свяжусь с вами.
+          </div>
+
           <input type="text" name="name" placeholder="Ваше имя" required />
           <input type="email" name="email" placeholder="Email" required />
           <input type="text" name="subject" placeholder="Тема" />
-          <textarea name="message" placeholder="Расскажите о проекте" required></textarea>
-          <button type="submit" class="btn btn-primary">Отправить заявку</button>
+          <textarea name="message" placeholder="Сообщение" required></textarea>
+
+          <div class="form-hint">💾 Черновик автоматически сохраняется в localStorage</div>
+          <button type="submit" class="btn btn-primary">Отправить →</button>
         </form>
       </div>
     </section>
@@ -96,7 +102,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Luzaniny. Сделано с ♥</div>
+      <div>© <span id="year"></span> Luzaniny. Учебный проект.</div>
       <div class="socials">
         <a href="https://github.com/luzaninyhsema-dev" target="_blank" rel="noopener">GitHub</a>
         <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
@@ -106,6 +112,6 @@
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
-  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
