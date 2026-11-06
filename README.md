@@ -54,6 +54,55 @@ my-web-site/
 └── README.md               # Этот файл
 ```
 
+**Структура проекта**
+```mermaid
+flowchart TD
+    ROOT["my-web-site/"]
+
+    ROOT --> INDEX["index.html<br/>Главная: hero, статистика,<br/>новости, ссылки"]
+    ROOT --> ABOUT["about.html<br/>О проекте: описание, цели,<br/>команда, история"]
+    ROOT --> BLOG["blog.html<br/>Блог / Новости с фильтром<br/>и поиском"]
+    ROOT --> CONTACT["contact.html<br/>Контакты: форма<br/>и способы связи"]
+    ROOT --> CSS["css/"]
+    ROOT --> JS["js/"]
+    ROOT --> IMG["img/"]
+    ROOT --> README["README.md<br/>Этот файл"]
+
+    CSS --> STYLE["style.css<br/>Единые стили<br/>для всех страниц"]
+
+    JS --> SCRIPT["script.js<br/>Общий JavaScript<br/>(тема, меню, поиск,<br/>localStorage)"]
+
+    IMG --> LOGO["logo.png<br/>Логотип проекта"]
+    IMG --> FAVICON["favicon.ico<br/>Иконка сайта"]
+    IMG --> SCREENSHOTS["screenshots/<br/>Скриншоты для README"]
+
+    SCREENSHOTS --> DESKTOP["desktop.png"]
+    SCREENSHOTS --> TABLET["tablet.png"]
+    SCREENSHOTS --> MOBILE["mobile.png"]
+
+    %% Связи «страницы используют ресурсы»
+    INDEX -.-> STYLE
+    INDEX -.-> SCRIPT
+    ABOUT -.-> STYLE
+    ABOUT -.-> SCRIPT
+    BLOG -.-> STYLE
+    BLOG -.-> SCRIPT
+    CONTACT -.-> STYLE
+    CONTACT -.-> SCRIPT
+
+    %% Стилизация
+    classDef root fill:#4A90D9,stroke:#2C5F8A,stroke-width:2px,color:#fff
+    classDef page fill:#50B86C,stroke:#2E7D32,color:#fff
+    classDef dir fill:#E8A838,stroke:#B8860B,color:#000
+    classDef asset fill:#9B59B6,stroke:#6C3483,color:#fff
+    classDef doc fill:#95A5A6,stroke:#5D6D7E,color:#fff
+
+    class ROOT root
+    class INDEX,ABOUT,BLOG,CONTACT page
+    class CSS,JS,IMG,SCREENSHOTS dir
+    class STYLE,SCRIPT,LOGO,FAVICON,DESKTOP,TABLET,MOBILE asset
+    class README doc
+```
 **Описание файлов:**
 
 | Файл / папка | Назначение |
